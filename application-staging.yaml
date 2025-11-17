@@ -1,0 +1,21 @@
+app:
+  name: demoammar3
+  environment: staging
+  debug: false
+  version: 1.0.0
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com.example.demo: INFO
+
+spring:
+  cloud:
+    consul:
+      discovery:
+        instance-id: ${spring.application.name}-staging-${spring.cloud.client.ip-address}
+        tags: env=staging,version=${spring.application.version}
+

@@ -1,0 +1,21 @@
+app:
+  name: demoammar2
+  environment: production
+  debug: false
+  version: 1.0.0
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: WARN
+    com.example.demo: INFO
+
+spring:
+  cloud:
+    consul:
+      discovery:
+        instance-id: ${spring.application.name}-prod-${spring.cloud.client.ip-address}
+        tags: env=prod,version=${spring.application.version}
+

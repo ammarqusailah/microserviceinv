@@ -1,0 +1,21 @@
+app:
+  name: devAmmar
+  environment: development
+  debug: true
+  version: 1.0.0
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: DEBUG
+    com.example.demo: DEBUG
+
+spring:
+  cloud:
+    consul:
+      discovery:
+        instance-id: ${spring.application.name}-dev-${spring.cloud.client.ip-address}
+        tags: env=dev,version=${spring.application.version}
+
