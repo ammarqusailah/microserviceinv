@@ -1,5 +1,5 @@
 app:
-  name: demoammar2
+  name: demoammar2_prod
   environment: production
   debug: false
   version: 1.0.0
