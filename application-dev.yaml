@@ -1,5 +1,5 @@
 app:
-  name: devAmmar2
+  name: devAmmar2_dev
   environment: development
   debug: true
   version: 1.0.0
